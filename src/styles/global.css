@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+/* Tema claro */
+html {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Tema oscuro */
+  html.dark {
+    background-color: black;
+    color: white;
+  }
