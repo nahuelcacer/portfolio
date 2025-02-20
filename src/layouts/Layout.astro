@@ -1,11 +1,11 @@
 ---
 import Header from "../components/Header.astro";
 const { title } = Astro.props;
-import './src/styles/global.css';
+import "./src/styles/global.css";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -13,7 +13,16 @@ import './src/styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-white dark:bg-gray-900 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
+		<h3
+			class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight"
+		>
+			Writes upside-down
+		</h3>
+		<p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">
+			The Zero Gravity Pen can be used to write in any orientation,
+			including upside-down. It even works in outer space.
+		</p>
 		<Header />
 		<slot />
 	</body>
