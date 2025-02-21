@@ -1,9 +1,18 @@
-<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+---
+import ThemeSwitcher from "./ThemeSwitcher.jsx";
+---
+
+<header
+    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
     <img src="" alt="nahuel_caceres_photo" />
 
-    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center gap-4">
+    <nav
+        class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center gap-4"
+    >
         <a>About</a>
-        <a href="/experience">Projects</a>
-        <a href="/projects">Projects</a>
+        <a href="#experience">Projects</a>
+        <a href="#projects">Projects</a>
+        <ThemeSwitcher client:load />
     </nav>
 </header>
