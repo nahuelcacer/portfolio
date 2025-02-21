@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Moon from "./Moon";
 
 export default function ThemeSwitcher() {
     const [theme, setTheme] = useState(() => {

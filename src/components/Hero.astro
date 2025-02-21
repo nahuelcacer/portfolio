@@ -1,0 +1,46 @@
+---
+import LiknkedIn from "../icons/LiknkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Github from "../icons/Github.astro";
+import Mail from "../icons/Mail.astro";
+---
+
+<div class="max-w-xl">
+    <div class="flex gap-4 mb-4">
+        <img
+            src="../../public/profile_nahuel.webp"
+            alt="nahuel_caceres_photo"
+            class="rounded-full shadow-lg size-24"
+        />
+    </div>
+
+    <h1
+        class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+        Hola! soy Nahuel
+    </h1>
+    <p
+        class="mt-4 text-2xl text-gray-600 dark:text-gray-300 [&>strong]:text-yellow-500 [&>strong]:font-semibold"
+    >
+        Desarrollador <strong>Full Stack</strong> en crecimiento con experiencia
+        en tecnologías modernas como <strong>React, Node.js, Django</strong> y más.
+        Me encanta aprender y compartir conocimientos.
+    </p>
+    <div class="mt-8">
+        <SocialPill href="https://www.linkedin.com/in/nahuel-c-a8727389">
+            <LiknkedIn
+                class="size-4"
+                
+            />
+            LinkedIn
+        </SocialPill>
+        <!-- <SocialPill href="https://github.com/nahuelcacer">
+            <Github class="size-4 dark:fill-white"/>
+            Github
+        </SocialPill> -->
+        <SocialPill href="mailto:nahue_cge@hotmail.com">
+            <Mail class="size-4" />
+            Contactame
+        </SocialPill>
+    </div>
+</div>
