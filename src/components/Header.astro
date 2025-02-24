@@ -19,19 +19,19 @@ import ThemeSwitcher from "./ThemeSwitcher.jsx";
         const nav = document.querySelector("nav");
 
         window.addEventListener("scroll", function () {
-            if (window.scrollY > window.innerHeight * 0.8) {
+            if (window.scrollY > window.innerHeight * 0.2) {
                 nav.classList.add(
-                    "backdrop-blur-sm",
-                    "bg-white/80",
-                    "shadow-sm",
-                    "dark:bg-gray-900/80",
+                    "backdrop-blur-md",
+                    "bg-white",
+                    "shadow-md",
+                    "dark:bg-gray-900",
                 );
             } else {
                 nav.classList.remove(
-                    "backdrop-blur-sm",
-                    "bg-white/80",
-                    "shadow-sm",
-                    "dark:bg-gray-900/80",
+                    "backdrop-blur-md",
+                    "bg-white",
+                    "shadow-md",
+                    "dark:bg-gray-900",
                 );
             }
         });
