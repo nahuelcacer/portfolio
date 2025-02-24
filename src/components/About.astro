@@ -1,0 +1,24 @@
+---
+import AboutIcon from "../icons/AboutIcon.astro";
+import TituloSeccion from "./TituloSeccion.astro";
+---
+
+<TituloSeccion title="Sobre mi">
+    <AboutIcon class="stroke-gray-800 dark:stroke-white size-10" />
+    <!-- <Github width="24px" height="24px" /> -->
+</TituloSeccion>
+<div class="flex flex-col gap-4 pt-6 md:flex-row">
+    <p class="text-gray-600 dark:text-gray-400">
+        Me llamo Nahuel Caceres soy full stack developer Freelance, me encanta
+        aprender y compartir conocimientos. Actualmente trabajo en el Colegio de
+        Escribanos del Chaco, donde diseño, desarrollo y mantengo aplicaciones
+        web, incluyendo el modelado de bases de datos y las interfaces
+        interactivas. Actualmente estoy en busca de mi primer experiencia
+        laboral en una empresa de tecnologia.
+    </p>
+    <img
+        src="/aboutme.webp"
+        alt="nahuel_caceres_photo"
+        class="rounded-sm shadow-lg w-64 h-76 md:size-56 md:rotate-2 p-2 border-1 border-gray-400 dark:border-white "
+    />
+</div>
