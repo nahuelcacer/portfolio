@@ -1,0 +1,27 @@
+---
+import TituloSeccion from "./TituloSeccion.astro";
+import CodeIcon from "../icons/CodeIcon.astro";
+import ProjectArticle from "./ProjectArticle.astro";
+import Node from "../icons/Node.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+const { image, title, description } = Astro.props;
+---
+
+<TituloSeccion title="Proyectos">
+    <CodeIcon
+        class="[&>g>path]:stroke-gray-800 dark:[&>g>path]:stroke-white size-10"
+    />
+</TituloSeccion>
+<ProjectArticle
+    description="Aplicacion web diseñada para gestionar tareas del sector Tesoreria, conciliacion bancaria con modificacion de estados, visualizacion de saldos, liquidacion de sueldos, jubilaciones y pensiones"
+    title="Gestib"
+    image="/gestib_image.webp"
+>
+    <!-- <Github class="size-6"></Github> -->
+    <div class="flex flex-wrap gap-4">
+        <Node />
+        <ReactIcon class="size-4" />
+        <TailwindIcon class="size-4" />
+    </div>
+</ProjectArticle>
