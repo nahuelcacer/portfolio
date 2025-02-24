@@ -17,30 +17,37 @@ export default function ThemeSwitcher() {
         root.classList.toggle("dark", isDark);
     }, [theme]);
 
-    const toggleTheme = (mode) => {
-        if (mode === "system") {
-            localStorage.removeItem("theme");
-        } else {
-            localStorage.setItem("theme", mode);
+    const toggleTheme = () => {
+        const actualTheme = localStorage.getItem("theme");
+
+        // Si no hay tema almacenado, establecer un valor por defecto
+        if (!actualTheme) {
+            localStorage.setItem("theme", "dark");
+            setTheme("dark");
+            return;
         }
-        setTheme(mode);
+
+        // Alternar entre "light" y "dark"
+        const newTheme = actualTheme === "light" ? "dark" : "light";
+        localStorage.setItem("theme", newTheme);
+        setTheme(newTheme);
     };
 
     return (
         <div className="flex gap-2">
 
             <button
-                onClick={() => toggleTheme("light")}
+                onClick={() => toggleTheme()}
                 className={`p-2 rounded ${theme === "light" ? "bg-gray-300" : ""}`}
             >
-                ☀️
+                {theme === "light" ? "🌙" : "🌞"}
             </button>
-            <button
+            {/* <button
                 onClick={() => toggleTheme("dark")}
                 className={`p-2 rounded ${theme === "dark" ? "bg-gray-700 text-white" : ""}`}
             >
                 🌙
-            </button>
+            </button> */}
 
         </div>
         // <div
