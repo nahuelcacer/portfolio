@@ -14,3 +14,26 @@ import ThemeSwitcher from "./ThemeSwitcher.jsx";
         <ThemeSwitcher client:load />
     </nav>
 </header>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.querySelector("nav");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > window.innerHeight * 0.8) {
+                nav.classList.add(
+                    "backdrop-blur-md",
+                    "bg-white/80",
+                    "shadow-md",
+                    "dark:bg-gray-900/80",
+                );
+            } else {
+                nav.classList.remove(
+                    "backdrop-blur-md",
+                    "bg-white/80",
+                    "shadow-md",
+                    "dark:bg-gray-900/80",
+                );
+            }
+        });
+    });
+</script>
