@@ -40,11 +40,11 @@ export default function ThemeSwitcher() {
 
             <button
                 onClick={() => toggleTheme()}
-                className={`p-2 rounded`}
+                class={`rounded group`}
             >
                 {theme === "light" ?
-                    <MoonIcon class="size-4 [&>g>path:nth-child(1)]:stroke-yellow-500 [&>g>path:nth-child(1)]:fill-yellow-500 [&>g>path:nth-child(2)]:stroke-yellow-500 [&>g>path:nth-child(2)]:fill-yellow-500 [&>g>path]:fill-gray-600" /> :
-                    <SunIcon class=" size-5 [&>g>path]:stroke-yellow-500" />}
+                    <MoonIcon class="size-4 group-hover:scale-110 [&>g>path:nth-child(1)]:stroke-yellow-500 [&>g>path:nth-child(1)]:fill-yellow-500 [&>g>path:nth-child(2)]:stroke-yellow-500 [&>g>path:nth-child(2)]:fill-yellow-500 [&>g>path]:fill-gray-600" /> :
+                    <SunIcon class=" size-5 [&>g>path]:stroke-yellow-500 group-hover:scale-110" />}
             </button>
             {/* <button
                 onClick={() => toggleTheme("dark")}
