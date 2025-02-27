@@ -3,6 +3,7 @@ import LiknkedIn from "../icons/LiknkedIn.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Github from "../icons/Github.astro";
 import Mail from "../icons/Mail.astro";
+import Whatsapp from "../icons/Whatsapp.astro";
 ---
 
 <div class="max-w-xl">
@@ -28,18 +29,16 @@ import Mail from "../icons/Mail.astro";
     </p>
     <div class="mt-8">
         <SocialPill href="https://www.linkedin.com/in/nahuel-c-a8727389">
-            <LiknkedIn
-                class="size-4"
-                
-            />
+            <LiknkedIn class="size-4" />
             LinkedIn
         </SocialPill>
         <!-- <SocialPill href="https://github.com/nahuelcacer">
             <Github class="size-4 dark:fill-white"/>
             Github
         </SocialPill> -->
-        <SocialPill href="mailto:nahue_cge@hotmail.com">
-            <Mail class="size-4" />
+        <SocialPill href="https://wa.me/+543735535886?text=Hola%21%20estoy%20interesado%2Fa%20en%20contratar%20tus%20servicios">
+            <Whatsapp class="size-4 [&>g>path]:fill-gray-800 dark:[&>g>path]:fill-white dark:group-hover:[&>g>path]:fill-gray-800 group-hover:[&>g>path]:fill-white" />
+            <!-- <Mail class="size-4" /> -->
             Contactame
         </SocialPill>
     </div>
