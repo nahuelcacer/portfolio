@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import MoonIcon from "../icons/MoonIcon";
+import SunIcon from "../icons/SunIcon";
 
 export default function ThemeSwitcher() {
     const [theme, setTheme] = useState(() => {
@@ -38,9 +40,11 @@ export default function ThemeSwitcher() {
 
             <button
                 onClick={() => toggleTheme()}
-                className={`p-2 rounded ${theme === "light" ? "bg-gray-300" : ""}`}
+                className={`p-2 rounded`}
             >
-                {theme === "light" ? "🌙" : "🌞"}
+                {theme === "light" ?
+                    <MoonIcon class="size-4 [&>g>path:nth-child(1)]:stroke-yellow-500 [&>g>path:nth-child(1)]:fill-yellow-500 [&>g>path:nth-child(2)]:stroke-yellow-500 [&>g>path:nth-child(2)]:fill-yellow-500 [&>g>path]:fill-gray-600" /> :
+                    <SunIcon class=" size-5 [&>g>path]:stroke-yellow-500" />}
             </button>
             {/* <button
                 onClick={() => toggleTheme("dark")}
