@@ -26,3 +26,21 @@ import "../styles/global.css";
 		<Footer />
 	</body>
 </html>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const sections = document.querySelectorAll("section");
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						document.title = entry.target.querySelector("h1").textContent + " | Nahuel Caceres";
+					}
+				});
+			},
+			{ threshold: 0.5 },
+		);
+
+		sections.forEach((section) => observer.observe(section));
+	});
+</script>
